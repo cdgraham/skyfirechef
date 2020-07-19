@@ -1,8 +1,6 @@
 import React from "react"
-import { css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
 
-import { rhythm } from "../utils/typography"
 export default function Layout({ children }) {
   const data = useStaticQuery(
     graphql`
@@ -15,34 +13,21 @@ export default function Layout({ children }) {
       }
     `
   )
+
   return (
-    <div
-      css={css`
-        margin: 0 auto;
-        max-width: 700px;
-        padding: ${rhythm(2)};
-        padding-top: ${rhythm(1.5)};
-      `}
-    >
-      <Link to={`/`}>
-        <h3
-          css={css`
-            margin-bottom: ${rhythm(2)};
-            display: inline-block;
-            font-style: normal;
-          `}
-        >
-          {data.site.siteMetadata.title}
-        </h3>
-      </Link>
-      <Link
-        to={`/about/`}
-        css={css`
-          float: right;
-        `}
-      >
-        About
-      </Link>
+    <div className="container px-8 py-12 max-w-lg mx-auto sm:max-w-xl lg:max-w-5xl">
+      <header className="flex items-center justify-between flex-wrap text-xl bg-teal-700 px-6 py-4 rounded-lg">
+        <div>
+          <Link to={`/`}>
+            <h3 className="text-white">{data.site.siteMetadata.title}</h3>
+          </Link>
+        </div>
+        <div className="text-white">
+          <Link to={`/about/`}>
+            About
+          </Link>
+        </div>
+      </header>
       {children}
     </div>
   )

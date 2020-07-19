@@ -1,48 +1,27 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { css } from "@emotion/core"
-import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 export default function Home({ data }) {
   console.log(data)
   return (
     <Layout>
-      <div>
-        <h1
-          css={css`
-            display: inline-block;
-            border-bottom: 1px solid;
-          `}
-        >
-          Book of knowledge
-        </h1>
-        <h6>(and other useless things).</h6>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+      <SEO title="Sky Fire Chef"/>
+      <div className="m-4">
+        <div className="my-6 text-center">
+          <h1 className="text-3xl">100 days of Gatsby</h1>
+          <h6>(and other useless things).</h6>
+        </div>
+        <h4 className="text-2xl">{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link 
-              to={node.fields.slug} 
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
-            >
-              <h3
-                css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
-                `}
-              >
+          <div className="pb-6 px-6 mb-4 shadow-lg" key={node.id}>
+            <Link to={node.fields.slug}>
+              <h3 className="text-4xl">
                 {node.frontmatter.title}{" "}
-                <span
-                  css={css`
-                    color: #bbb;
-                  `}
-                >
-                  — {node.frontmatter.date}
-                </span>
+                <span>— {node.frontmatter.date}</span>
               </h3>
-              <p>{node.excerpt}</p>
+              <div className="list-inside">{node.excerpt}</div>
             </Link>
           </div>
         ))}
