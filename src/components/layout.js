@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
+import { Box, Flex, Heading } from "@chakra-ui/core"
 
 export default function Layout({ children }) {
   const data = useStaticQuery(
@@ -15,20 +16,20 @@ export default function Layout({ children }) {
   )
 
   return (
-    <div className="container px-8 py-12 max-w-lg mx-auto sm:max-w-xl lg:max-w-5xl">
-      <header className="flex items-center justify-between flex-wrap text-xl bg-teal-700 px-6 py-4 rounded-lg">
-        <div>
+    <Box maxWidth='960px' my={4} mx="auto" align="center">
+      <Flex bg="teal.600" color="white" rounded="lg" p={4} align="center" justify="space-between">
+        <Flex >
           <Link to={`/`}>
-            <h3 className="text-white">{data.site.siteMetadata.title}</h3>
+            <Heading className="">{data.site.siteMetadata.title}</Heading>
           </Link>
-        </div>
-        <div className="text-white">
+        </Flex>
+        <Flex fontSize="xl">
           <Link to={`/about/`}>
             About
           </Link>
-        </div>
-      </header>
+        </Flex>
+      </Flex>
       {children}
-    </div>
+    </Box>
   )
 }

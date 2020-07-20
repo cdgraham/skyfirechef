@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import { Box, Divider, Flex, Heading, Text } from "@chakra-ui/core"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -8,24 +9,25 @@ export default function Home({ data }) {
   return (
     <Layout>
       <SEO title="Sky Fire Chef"/>
-      <div className="m-4">
-        <div className="my-6 text-center">
-          <h1 className="text-3xl">100 days of Gatsby</h1>
+      <Box m={6}>
+        <Box textAlign="center">
+          <Heading>100 days of Gatsby</Heading>
           <h6>(and other useless things).</h6>
-        </div>
-        <h4 className="text-2xl">{data.allMarkdownRemark.totalCount} Posts</h4>
+        </Box>
+        <Divider />
+        <Heading fontSize="xl">{data.allMarkdownRemark.totalCount} Posts</Heading>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div className="pb-6 px-6 mb-4 shadow-lg" key={node.id}>
+          <Box m={4} p={6} boxShadow="md" key={node.id}>
             <Link to={node.fields.slug}>
-              <h3 className="text-4xl">
+              <Heading >
                 {node.frontmatter.title}{" "}
                 <span>— {node.frontmatter.date}</span>
-              </h3>
-              <div className="list-inside">{node.excerpt}</div>
+              </Heading>
+              <Text mt={4}>{node.excerpt}</Text>
             </Link>
-          </div>
+          </Box>
         ))}
-      </div>
+      </Box>
     </Layout>
   )
 }

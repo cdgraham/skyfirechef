@@ -1,24 +1,17 @@
 ---
 title: "Day Two of 100 days of Gatsby"
-date: "2020-07-19"
+date: "2020-07-12"
 ---
 
-## Day 2
+Day Two of #100DaysOfGatsby.
 
-Day 2 of #100DaysOfGatsby has been spent changing the styling for the site. 
+On day two I have decided to bring back my personal site [cdgraham.com](https://cdgraham.com) using Gatsby and a starter called gatsby-simplefolio. It is a minimalist one-page design that looks nice.
 
-I remove the typography from Gatsby and added Tailwind CSS. So far of what I have seen of Tailwind CSS it's pretty amazing and easy to use.
+I had started with the gatsby default starter but as I was looking around for some design ideas I stumbled on to this starter and decided to use it. Basically had what I was looking for and I thought it would be a lot quicker then creating all of that by hand.
 
-I have learned and lot over the last two days and have a ton of ideas floating aroung my head.
+It took me longer to write my tagline and about me than to make the changes to the code and get the site online. I think it actually took longer for my dns to update than the changes to the code took.
 
-Some things that need to be done or I am thinking about doing:
-* Styling the markdown from the .md post pages with Tailwind CSS
-* Add a resource page for my development links and online tools.
-* More styling changes.
-* Mobile responsive, like changing the navigation items to hamburger dropdown menu.
-* Moving this site to Netlify.
-* Moving my smaller sites to Gatsby with markdown.
-* Moving the larger sites to Gatsby as a frontend to a headless Wordpress.
+That's pretty cool, except for the waiting around to check the live site!
 
 Cheers,
 Christopher

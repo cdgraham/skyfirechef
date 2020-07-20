@@ -1,19 +1,15 @@
 ---
 title: "Day One of 100 days of Gatsby"
-date: "2020-07-18"
+date: "2020-07-11"
 ---
 
-## Day 1
+Day One of #100DaysOfGatsby.
 
-This is my first post for #100DaysOfGatsby.
+I spent most of day one going through the [GatsbyJS.org](https://gatsbyjs.org) website. Reading about it and doing the basic tutorial. I created a couple of the starter sites, the Hello World starter (gatsby-starter-hello-world) and the default starter (gatsby-starter-default). All developers know you have to start with a hello world application/site when you first start learning a new language.
 
-So far I have create this site using the [Gatsby Tutorial](https://www.gatsbyjs.org/tutorial/) lessons 0-8.
+A pretty light day with a lot of reading and researching about Gatsby.
 
-Now you may be wondering what a strange name for a site, Sky Fire Chef. And it is. I don't really remember how I ended up with it. My friend and I were registers some names and registered skyfirewinds.com and skyfirechef.com. I believe it was supposed to be skyfirechief.com but we missed that we spelled it wrong.
-
-Long story short I have just kept the domain for all these years and since I wasn't doing anything with it I figured why not.
-
-Hope you all enjoy it.
+It's amazing how quick you can get a basic website setup and running.
 
 Cheers,
 Christopher
