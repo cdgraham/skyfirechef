@@ -6,7 +6,7 @@ socialImage: "/photo.jpg"
 
 I'm an undiscovered developer, maker, tinkerer, artist and multipotentialite.
 
-![Christopher Graham](/photo.jpg)
+![Christopher Graham](/media/profile.jpg)
 
 Multipotentialite who loves learning, solving problems, warehouse racking, tinkering, and crab legs. With a diverse background, I am looking for my next adventure in technology. My background includes operating nuclear reactors, software development, database and systems administrator, selling real estate, making YouTube videos, WordPress development, travelling to remote warehouses and leading teams of developers. Oh and eating crème brûlée in France.
 
